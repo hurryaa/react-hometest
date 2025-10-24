@@ -93,10 +93,10 @@ const navbarData = {
 
 export function AICorpNavbar() {
   return (
-    <div className="w-full nav-blur rounded-xl">
+    <div className="w-full">
       <div className="flex items-center justify-between">
         <div className="flex-1">
-          <Navbar1 {...navbarData} mobileThemeToggle={<ThemeToggle />} />
+          <Navbar1 {...navbarData} />
         </div>
         <div className="ml-4 hidden lg:block">
           <ThemeToggle />

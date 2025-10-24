@@ -1,12 +1,11 @@
 import React, { useEffect, useRef } from 'react'
 import { ThemeProvider } from 'next-themes'
-import { AICorpNavbar } from './components/AICorpNavbar'
+import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import Products from './components/Products'
 import { Features } from './components/Features'
 import { Marquee } from './components/Marquee'
 import InteractiveGrid from './components/InteractiveGrid'
-import { GlobalMap } from './components/GlobalMap'
 import { CTA } from './components/CTA'
 import { Footer } from './components/Footer'
 import { site } from './config'
@@ -47,7 +46,7 @@ export default function App() {
     <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange={false}>
       <div className="min-h-screen bg-background text-foreground">
         <div className="fixed top-4 left-4 right-4 z-50 max-w-7xl mx-auto">
-          <AICorpNavbar />
+        <Navbar />
         </div>
 
         <main className="grid-bg" ref={bgRef} onMouseMove={onMove}>
@@ -60,8 +59,6 @@ export default function App() {
           <Features features={site.features} className="grid-bg" />
 
           <InteractiveGrid />
-
-          <GlobalMap />
 
           <CTA
             title="开启您的AI之旅"
