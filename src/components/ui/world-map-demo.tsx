@@ -1,5 +1,5 @@
 "use client";
-import { WorldMap } from "@/components/ui/world-map";
+import { WorldMap } from "@/components/ui/map";
 import { motion } from "framer-motion";
 
 export function WorldMapDemo() {
