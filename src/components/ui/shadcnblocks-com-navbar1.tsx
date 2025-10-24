@@ -1,5 +1,4 @@
 import { Book, Menu, Sunset, Trees, Zap } from "lucide-react"
-import { type ReactNode } from "react"
 
 import {
   Accordion,
@@ -54,7 +53,6 @@ interface Navbar1Props {
       url: string
     }
   }
-  mobileThemeToggle?: ReactNode
 }
 
 const Navbar1 = ({
@@ -146,7 +144,6 @@ const Navbar1 = ({
     login: { text: "Log in", url: "#" },
     signup: { text: "Sign up", url: "#" },
   },
-  mobileThemeToggle,
 }: Navbar1Props) => {
   return (
     <section className="py-4">
@@ -226,11 +223,6 @@ const Navbar1 = ({
                       <a href={auth.signup.url}>{auth.signup.text}</a>
                     </Button>
                   </div>
-                  {mobileThemeToggle ? (
-                    <div className="flex items-center justify-center border-t pt-4">
-                      {mobileThemeToggle}
-                    </div>
-                  ) : null}
                 </div>
               </SheetContent>
             </Sheet>
