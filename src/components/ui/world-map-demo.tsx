@@ -1,4 +1,3 @@
-"use client";
 import { WorldMap } from "@/components/ui/map";
 import { motion } from "framer-motion";
 
