@@ -1,9 +1,5 @@
-use client;
-
 import React from 'react';
 import { motion } from 'framer-motion';
-import Link from 'next/link';
-import Image from 'next/image';
 
 const transition = {
   type: 'spring',
@@ -90,8 +86,8 @@ export const ProductItem = ({
   src: string;
 }) => {
   return (
-    <Link href={href} className="flex space-x-2">
-      <Image
+    <a href={href} className="flex space-x-2">
+      <img
         src={src}
         width={140}
         height={70}
@@ -106,7 +102,7 @@ export const ProductItem = ({
           {description}
         </p>
       </div>
-    </Link>
+    </a>
   );
 };
 
@@ -115,11 +111,11 @@ export const HoveredLink = ({
   ...rest,
 }: any) => {
   return (
-    <Link
+    <a
       {...rest}
       className="text-neutral-700 dark:text-neutral-200 hover:text-black "
     >
       {children}
-    </Link>
+    </a>
   );
 };
